@@ -1,0 +1,384 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #07111f;
+    color: #eef4ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+img, video { 
+    max-width: 100%; 
+}
+img { 
+    display: block; 
+}
+a { 
+    color: #8fe7ef; 
+    text-decoration: none; 
+}
+
+a[target="_blank"]::after 
+{ content: " ↗"; 
+}
+a:hover { 
+    color: #ffffff; 
+}
+h1, h2, h3, p { 
+    margin-top: 0; 
+}
+h1, h2, h3 { 
+    line-height: 1.15; 
+}
+h1 { 
+    font-size: 2.7rem; 
+}
+h2 { 
+    font-size: 1.8rem; 
+}
+em { 
+    color: #80dce8; 
+    font-style: normal; 
+}
+.entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 5%;
+    background: #0b192a;
+    border-bottom: 1px solid #26384d;
+}
+.marque { 
+    color: #ffffff; 
+    font-size: 1.35rem; 
+    font-weight: bold; 
+    letter-spacing: 2px; 
+}
+.symbole { 
+    color: #80dce8; 
+    margin-right: 8px; 
+}
+.marque small { 
+    display: block; 
+    color: #9aabc1; 
+    font-size: .58rem; 
+    letter-spacing: 2px; 
+}
+.navigation { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 18px; 
+}
+.navigation a { 
+    color: #d8e3f2; 
+    font-size: .9rem; 
+    font-weight: normal;
+}
+.navigation a:hover { 
+    color: #80dce8; 
+}
+.banniere {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 65px 8%;
+    background: linear-gradient(90deg, rgba(7,17,31,.96), rgba(7,17,31,.62)), url("https://science.nasa.gov/wp-content/uploads/2023/06/solar-system-model.jpg") center/cover;
+}
+
+.chiffres {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 28px 5%;
+    background: #10243a;
+}
+.nombre { 
+    color: #80dce8; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+.chiffres p { 
+    margin: 0; 
+    font-weight: bold; 
+}
+.chiffres small, .infos-planete p, .carte-planete p, .carte-mission p { 
+    color: #bdcce0; 
+}
+.section, .section-tableau, .video-section {
+    padding: 55px 6%;
+}
+.titre-section { 
+    display: flex; 
+    align-items: end; 
+    justify-content: space-between; 
+    gap: 25px; 
+    margin-bottom: 25px; 
+}
+.planetes-vedettes, .grille-missions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+.carte-planete, .carte-mission { 
+    overflow: hidden; 
+    background: #10243a; 
+    border: 1px solid #263e58; 
+    border-radius: 8px; 
+}
+.carte-planete img, .carte-mission img { 
+    width: 100%; 
+    height: 210px; 
+    object-fit: cover; 
+}
+.carte-planete.terre img, .carte-planete.mars img { 
+    object-fit: contain; 
+    background: #050c15; 
+}
+.carte-planete h3, .carte-planete p, .carte-mission h3, .carte-mission p { 
+    margin: 14px 18px; 
+}
+.carte-planete div, .carte-mission div { 
+    padding: 12px 0; 
+}
+.carte-planete span, .carte-mission span, .infos-planete span { 
+    margin: 0 18px; 
+    color: #80dce8; 
+    font-size: .75rem; 
+    letter-spacing: 1px; 
+}
+.lien-souligné { 
+    display: inline-block; 
+    margin-top: 12px; 
+}
+.bande-histoire { 
+    display: flex; 
+    align-items: center; 
+    gap: 28px; 
+    padding: 35px 6%; 
+    background: #10243a; 
+}
+
+.image-histoire img { 
+    width: 120%; 
+    height: 260px; 
+    background: #050c15; 
+    border-radius: 6px; 
+}
+
+.bouton-principal { 
+    display: inline-block; 
+    padding: 11px 18px; 
+    border: 1px solid #80dce8; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font: inherit; 
+}
+.bouton-principal { 
+    background: #80dce8; 
+    color: #07111f; 
+}
+.titre-page, .banniere-page {
+    padding: 65px 7% 40px;
+}
+.titre-page p:last-child, .banniere-page p:last-child { 
+    color: #bdcce0; 
+}
+.galerie-planetes { 
+    padding: 10px 6% 6% 50px; 
+}
+.fiche-planete {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 28px 0;
+    border-bottom: 1px solid #26384d;
+}
+.fiche-planete.inverse { 
+    flex-direction: row-reverse; 
+}
+.photo-planete, .infos-planete { 
+    width: 50%; 
+}
+.photo-planete img {
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+    object-position: center;
+    background: #050c15;
+    border-radius: 7px;
+}
+.infos-planete span { 
+    margin: 0; 
+}
+.cadre-video { 
+    margin-top: 20px; 
+    padding: 20px; 
+    background: #10243a; 
+    border-radius: 8px; 
+}
+.cadre-video video { 
+    display: block; 
+    width: 100%; 
+    max-height: 480px; 
+    background: #000; 
+}
+.note-video, .source-tableau, .pied-tableau, .note-formulaire { 
+    color: #a9bad0; 
+    font-size: .85rem; 
+}
+.section-tableau, .titre-contact { 
+    text-align: center; 
+}
+.defilement-tableau { 
+    overflow-x: auto; 
+}
+.tableau-espace { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #10243a; 
+}
+.tableau-espace th, .tableau-espace td { 
+    padding: 12px; 
+    border: 1px solid #40536a; 
+    text-align: center; 
+    vertical-align: middle; 
+}
+.tableau-espace th { 
+    background: #1b3a54; 
+    color: #80dce8; 
+}
+.tableau-espace tr:nth-child(even) { 
+    background: #142b42; 
+}
+.cellule-categorie {
+     font-weight: bold; 
+    }
+.source-tableau { 
+    text-align: center; 
+}
+.zone-formulaire {
+    display: flex;
+    justify-content: center;
+    padding: 35px 5% 55px;
+}
+.formulaire-espace {
+    width: 100%;
+    max-width: 720px;
+    padding: 25px;
+    background: #10243a;
+    border: 1px solid #263e58;
+    border-radius: 8px;
+}
+.titre-formulaire { 
+    margin-bottom: 22px; 
+    text-align: center; 
+    font-weight: bold; 
+}
+.champ { 
+    margin-bottom: 17px; 
+}
+.champ > label { 
+    display: block; 
+    margin-bottom: 6px; 
+}
+.formulaire-espace input:not([type="radio"]):not([type="checkbox"]):not([type="range"]), .formulaire-espace select, .formulaire-espace textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #53677e;
+    border-radius: 4px;
+    background: #07111f;
+    color: #ffffff;
+    font: inherit;
+}
+.choix { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 14px; 
+    margin: 12px 0; }
+.choix label { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; }
+#niveau-valeur { 
+    float: right; 
+    color: #80dce8; 
+}
+.erreur-formulaire { color: #ff9b9b; }
+.succes-formulaire { color: #9ce8bd; }
+.pied { 
+    margin-top: 30px; 
+    background: #050c15;
+    border-top: 1px solid #26384d; 
+}
+.pied-bas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 6%;
+    color: #8fa2b9;
+    font-size: .8rem;
+}
+.pied-bas a { color: #8fe7ef; }
+@media screen and (max-width: 800px) {
+    .entete {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .navigation {
+        gap: 12px;
+    }
+    .planetes-vedettes, .grille-missions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bande-histoire {
+        flex-direction: column;
+    }
+    .image-histoire, .photo-planete, .infos-planete {
+        width: 100%;
+    }
+    .fiche-planete, .fiche-planete.inverse {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .titre-section {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 520px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .banniere {
+        min-height: 430px;
+        padding: 45px 6%;
+    }
+    .legende-banniere {
+        font-size: .6rem;
+        flex-wrap: wrap;
+    }
+    .chiffres {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .planetes-vedettes, .grille-missions {
+        grid-template-columns: 1fr;
+    }
+    .section, .section-tableau, .video-section {
+        padding: 35px 5%;
+    }
+    .formulaire-espace {
+        padding: 16px;
+    }
+    .pied-bas {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

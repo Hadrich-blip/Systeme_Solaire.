@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOLARIS | Rejoindre l'expédition</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header class="entete">
+            <a class="marque" href="index.html">
+                <span class="symbole">✦</span>SOLARIS
+                <small>EXPLORATION SPATIALE</small>
+            </a>
+            <nav class="navigation">
+                <a href="index.html">Accueil</a>
+                <a href="planetes.html">Planètes</a>
+                <a href="missions.html">Missions</a>
+                <a href="donnees.html">Données</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <section class="titre-page titre-contact">
+                <p class="surtitre">INSCRIPTION</p><h1>Rejoignez notre <em>expédition.</em></h1>
+                <p>Choisissez votre destination et partagez votre intérêt pour l'espace.</p>
+            </section>
+            <section class="zone-formulaire">
+                <form class="formulaire-espace" id="inscription" onsubmit="return verifierFormulaire()">                    
+                    <h2 class="titre-formulaire">FORMULAIRE D'INSCRIPTION</h2>
+                    <div class="champ">
+                        <label for="nom">Nom complet *</label>
+                        <input id="nom" name="nom" placeholder="Votre nom" type="text">
+                    </div>
+                    <div class="champ">
+                        <label for="email">Adresse e-mail *</label>
+                        <input id="email" name="email" placeholder="nom@exemple.com" type="email">
+                    </div>
+                    <div class="champ">
+                        <label for="pays">Pays *</label>
+                        <select id="pays" name="pays">
+                            <option value="">Choisir un pays</option>
+                            <option>Tunisie</option>
+                            <option>France</option>
+                            <option>Canada</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="champ">
+                        <label for="photo">Photo de profil (facultatif)</label>
+                        <input accept="image/*" id="photo" name="photo" type="file">
+                    </div>
+                    <div class="champ">
+                        <label>Votre destination préférée *</label>
+                        <div class="choix">
+                            <input name="destination" type="radio" value="Mars" checked>Mars
+                            <input name="destination" type="radio" value="Lune">Lune
+                            <input name="destination" type="radio" value="Saturne">Saturne
+                        </div>
+                    </div>                    
+                    <div class="champ">
+                        <label>Centres d'intérêt</label>
+                        <div class="choix">
+                            <input name="interets" type="checkbox" value="Planètes">Planètes
+                            <input name="interets" type="checkbox" value="Astronautes">Astronautes
+                            <input name="interets" type="checkbox" value="Robots">Robots
+                        </div>
+                    </div>
+                    <div class="champ">
+                        <label for="niveau">Votre intérêt pour l'espace <span id="niveau-valeur">5 / 10</span></label>
+                        <input id="niveau" max="10" min="1" name="niveau" oninput="afficherNiveau()" type="range" value="5">
+                    </div>
+                    <div class="champ">
+                        <label for="message">Votre message</label>
+                        <textarea id="message" name="message" placeholder="Parlez-nous de votre intérêt..." rows="3"></textarea>
+                    </div>
+                    <p class="erreur-formulaire" id="erreur-form"></p>
+                    <p class="succes-formulaire" id="succes-form"></p>
+                    <button class="bouton-principal" type="submit">Envoyer ma demande →</button>
+                    <p class="note-formulaire">* Champs obligatoires. Formulaire de démonstration pédagogique.</p>
+                </form>
+            </section>        
+        </main>
+        <footer class="pied">
+            <div class="pied-bas">
+                <span>&copy; 2026 SOLARIS</span>
+                <span>NASA : <a href="mailto:public-inquiries@hq.nasa.gov">public-inquiries@hq.nasa.gov</a> | <a href="tel:+12023580000">+1 202-358-0000</a></span>
+            </div>
+        </footer>
+    </body>
+</html>
